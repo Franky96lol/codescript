@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <form class="form">
+        <h2 class="form__title">Inicia Sesion</h2>
+        <p class="form__paragraph">¿ Aun no tienes una cuenta ? <a href="/auth/register" class="form__link">Unete ahora!</a></p>
+    
+        <div class="form__container">
+            <div class="form__group">
+                <input type="text" id="name" class="form__input" placeholder=" " autofocus>
+                <label for="name" class="form__label">Nombre:</label>
+                <span class="form__line"></span>
+            </div>
+            <div class="form__group">
+                <input type="password" id="password" class="form__input" placeholder=" ">
+                <label for="password" class="form__label">Contraseña:</label>
+                <span class="form__line"></span>
+            </div>
+
+            <input type="submit" class="form__submit" value="Login">
+        </div>
+    </form>
+</body>
+</html>

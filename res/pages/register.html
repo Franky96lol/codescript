@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+  <script src="/lib/ajax_send-1.2.1.min.js"></script>
+  <script src="/script/register.js"></script>
+  <script>
+      const submit = document.querySelector("#submit");
+      submit.onclick = function (_event){
+        alert("fula");
+        const username = document.getElementById("#username");
+        const email = document.getElemenyById("#email");
+        const password = document.getElementById("#password");
+        console.log("bien");
+        register(username.value , email.value , password.value , password.value);
+      }
+  </script>
+</head>
+<body>
+    <form class="form">
+        <h2 class="form__title">Registro</h2>
+        <p class="form__paragraph">¿ Ya tienes una cuenta ? <a href="/auth/login" class="form__link">Inicia sesion!</a></p>
+    
+        <div class="form__container">
+            <div class="form__group">
+                <input type="text" id="username" class="form__input" placeholder=" " autofocus>
+                <label for="name" class="form__label">Nombre:</label>
+                <span class="form__line"></span>
+            </div>
+            <div class="form__group">
+                <input type="email" id="email" class="form__input" placeholder=" ">
+                <label for="email" class="form__label">Email:</label>
+                <span class="form__line"></span>
+            </div>
+            <div class="form__group">
+                <input type="password" id="password" class="form__input" placeholder=" ">
+                <label for="password" class="form__label">Contraseña:</label>
+                <span class="form__line"></span>
+            </div>
+
+            <input type="submit" class="form__submit" id="submit"  value="Registro">
+        </div>
+    </form>
+</body>
+</html>
