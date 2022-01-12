@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background: linear-gradient(
+    145deg,
+    rgba(100,120,255, 50),
+    rgba(140,0,180, 100)
+  );
+
+}
+
+.form {
+    background-color: white;
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 4.5em 3em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px 2px rgb(0 0 0 / 30%);
+    text-align: center;
+}
+
+.form__title {
+    font-size: 2rem;
+    margin-bottom: .5em;
+}
+
+.form__paragraph {
+    font-weight: 300;
+}
+
+.form__link {
+    font-weight: 400;
+    color: #3866f2;
+}
+
+.form__container {
+    margin-top: 3em;
+    display: grid;
+    gap: 2.5em;
+}
+
+.form__group {
+    position: relative;
+    --color: #5757577e
+}
+
+.form__input {
+    width: 100%;
+    background: none;
+    color: #706c6c;
+    font-size: 1rem;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+}
+
+.form__input:focus + .form__label, .form__input:not(:placeholder-shown) + .form__label{
+    transform: translateY(-12px) scale(.7);
+    transform-origin: left top;
+    color: #3866f2;
+}
+
+.form__label {
+    color: var(--color);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(10px);
+    transition: transform .5s, color .3s;
+}
+
+.form__submit {
+    background : linear-gradient(
+    135deg,
+    rgba(100,120,255,50),
+    rgba(140,0,180,100));
+    color: white;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em 0;
+    border: none;
+    border-radius: .5em;
+}
+
+.form__line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #3866f2;
+    transform: scale(0);
+    transform-origin: left bottom;
+    transition: transform .4s;
+}
+
+.form__input:focus ~ .form__line, .form__input:not(:placeholder-shown) ~ .form__line {
+    transform: scale(1);
+}
