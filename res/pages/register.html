@@ -7,20 +7,27 @@
     <title>Register</title>
     <link rel="stylesheet" href="/styles/styles.css">
   <script src="/lib/ajax_send-1.2.1.min.js"></script>
+  <script src="/lib/stylespam-2.1.6.min.js"></script>
   <script src="/script/register.js"></script>
   <script>
-      const submit = document.querySelector("#submit");
+    function OnStart(){
+      const submit = document.getElementById("submit");
+      const username = document.getElementById("username");
+      const email = document.getElementById("email");
+      const password = document.getElementById("password");
+      const rpassword = document.getElementById("rpassword");
+      
       submit.onclick = function (_event){
-        alert("fula");
-        const username = document.getElementById("#username");
-        const email = document.getElemenyById("#email");
-        const password = document.getElementById("#password");
-        console.log("bien");
-        register(username.value , email.value , password.value , password.value);
+      
+        _event.preventDefault();
+        register(username.value , email.value , password.value , rpassword.value);
       }
+      
+      
+    }
   </script>
 </head>
-<body>
+<body onload="OnStart()">
     <form class="form">
         <h2 class="form__title">Registro</h2>
         <p class="form__paragraph">¿ Ya tienes una cuenta ? <a href="/auth/login" class="form__link">Inicia sesion!</a></p>
@@ -41,8 +48,13 @@
                 <label for="password" class="form__label">Contraseña:</label>
                 <span class="form__line"></span>
             </div>
+            <div class="form__group">
+                <input type="password" id="rpassword" class="form__input" placeholder=" ">
+                <label for="rpassword" class="form__label">Repetir Contraseña:</label>
+                <span class="form__line"></span>
+            </div>
 
-            <input type="submit" class="form__submit" id="submit"  value="Registro">
+            <input type="button" class="form__submit" id="submit"  value="Registro">
         </div>
     </form>
 </body>

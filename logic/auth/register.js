@@ -24,7 +24,7 @@ function register(req, res, next) {
     };
   }
 
-  //verificamos si lo tokens coinciden
+  //verificamos si los tokens coinciden
  /* if (token != config.APPTOKEN)
     return {
       status: false,
@@ -87,8 +87,14 @@ function register(req, res, next) {
     id: "",
     username: "",
     nickname: "",
+    pic : "/basic.jpg",
     email: "",
     password: "",
+    followers : [],
+    following : [],
+    repos : [],
+    works : [],
+    likes : 0,
     firstEnter: false,
     suscribed: false,
     verified: false, //cuenta verificada (por defecto false)
@@ -117,16 +123,23 @@ function register(req, res, next) {
     });
 
     const message = {
-      from: "fireshoot-team@email.com",
+      from: "codescript-team@email.com",
       to: email,
       subject: "Verificación de Cuenta.",
-      text:
-        "Para verificar su cuenta siga el link:\n" +
-        config.URL +
-        "/auth/verifyMail/" +
-        username +
-        "/" +
-        account.id
+      html:
+      ` 
+      <div bgcolor="#ff0000" align="center"> 
+      <hr> 
+      <h1 align="center"> Verificación de correo electrónico. </h1> 
+      <p align="center"> Al verificar el correo usted acepta los Términos y Condiciones de ScriptCode.</p> 
+      <br> 
+      <a class="boton" href="` + config.URL + '/auth/verifyMail/' + username + '/' + account.id + `"> • Verificar Correo </a> 
+      <br> 
+      <br> 
+      <hr> 
+      <p>  </p> 
+      </div> `
+      
     };
 
     transport.sendMail(message, function(err, info) {
@@ -136,7 +149,7 @@ function register(req, res, next) {
     });
 
     //si se escribe correctamente hacemos saber al usuario de que se ah registrado correctamente
-    return { status: true, message: "Se a registrado correctamente." };
+    return { status: true, message: "Se a registrado correctamente. \nSe a enviado a su correo el link de activación de su cuenta." };
   } catch (err) {
     //capturamos si ocurre un error y lo enviamos a la consola y al usuario (esperemos nunca llegar aqui)
     console.log(err);

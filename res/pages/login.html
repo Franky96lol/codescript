@@ -6,15 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="/styles/styles.css">
+  <script src="/lib/ajax_send-1.2.1.min.js"></script>
+  <script src="/lib/stylespam-2.1.6.min.js"></script>
+  <script src="/script/login.js"></script>
+  <script>
+    function OnStart(){
+      const submit = document.getElementById("submit");
+      const username = document.getElementById("username");
+      const password = document.getElementById("password");
+      submit.onclick = function(_event){
+        _event.preventDefault();
+        login(username.value, password.value);
+      }
+    }
+  </script>
 </head>
-<body>
+<body onload="OnStart()">
     <form class="form">
         <h2 class="form__title">Inicia Sesion</h2>
         <p class="form__paragraph">¿ Aun no tienes una cuenta ? <a href="/auth/register" class="form__link">Unete ahora!</a></p>
     
         <div class="form__container">
             <div class="form__group">
-                <input type="text" id="name" class="form__input" placeholder=" " autofocus>
+                <input type="text" id="username" class="form__input" placeholder=" " autofocus>
                 <label for="name" class="form__label">Nombre:</label>
                 <span class="form__line"></span>
             </div>
@@ -24,7 +38,7 @@
                 <span class="form__line"></span>
             </div>
 
-            <input type="submit" class="form__submit" value="Login">
+            <input type="button" id="submit" class="form__submit" value="Login">
         </div>
     </form>
 </body>

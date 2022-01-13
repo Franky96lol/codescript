@@ -1,29 +1,79 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>Upss...</title>
-  <meta name = "viewport" content="width=device-width"/>
-  <style>
-    body{
-      font-family : font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      min-height : 100vh;
-      background : linear-gradient(
-      135deg,
-        rgba(67,147,208,50),
-        rgba(154,38,217,100)
-      );
-    }
-    img{
-      background : rgba(0,0,0,0);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 404</title>
+    <style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-height : 100vh;
+    display: flex;
+    
+  background: linear-gradient(
+    145deg,
+    rgba(100,120,255, 50),
+    rgba(140,0,180, 100)
+  );
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Montserrat";
+    color: rgb(56,56,56);
+}
+      
+img{
+  width : 75vw;
+      }
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.wrapper h1 {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+.wrapper .message {
+    font-size: 1.5rem;
+    padding: 20px;
+    width: 60%;
+    text-align: center;
+}
+
+.boton {font-family: Times New Roman;
+  text-decoration:none;
+  font-weight: 400;
+  font-size: 14px;
+  color:black;
+  padding-bottom:15px;
+  padding-top:15px;
+  padding-left:40px;
+  padding-right:40px;
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+  border-radius:10px;
+  background: linear-gradient(
+  145deg,
+  rgba(100, 120, 255, 50),
+  rgba(140, 0, 180, 100));}
+
+.wrapper .copyRights {margin-top: 50px;}
+    </style>
 </head>
-
 <body>
-    <p>Upss... al parecer alguien ha pisoteado un cable o se incendio el servidor =(</p>
-    <p>Si el problema persiste no se preocupe, la web volvera a estar online =)</p>
-    <img src="https://cdn.glitch.global/c26b9902-066f-4585-abad-18355e6b944f/erro404.jpg?v=1641947780509" width="300">
+    <img src="https://cdn.glitch.global/c26b9902-066f-4585-abad-18355e6b944f/404.svg?v=1641961737690" alt="">
+    <div class="wrapper">
+        <h1>Pagina no encontrada</h1>
+       <p class="message">
+        Upss.. has llegado a un callejon sin salida.. esta pagina no existe.
+       </p>
+       <a href="#" class="boton"> Volver a la pagina principal </a>
+    </div>
 </body>
-
 </html>
