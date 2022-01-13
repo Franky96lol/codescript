@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient( 135deg, rgba(100,120,255, 50), rgba(140,0,180, 100) );
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav {
+    background-color: white;
+    height: 70px;
+}
+
+.nav__container {
+    display: flex;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__icon {
+    display: none;
+    cursor: pointer;
+}
+
+.nav__title {
+    font-size: 22px;
+}
+
+.nav__links {
+    height: 100%;
+    display: flex;
+}
+
+.nav__item {
+    list-style: none;
+    position: relative;
+    height: 100%;
+}
+
+.nav__link {
+    color: black;
+    text-decoration: none;
+    padding: 0 15px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.space {
+    padding: 30px;
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.card {
+    padding: 20px;
+}
+
+.card__title {
+    padding-bottom: 10px;
+}
+
+.card__description {
+    padding-bottom: 10px;
+}
+
+.card__creator {
+    padding-bottom: 10px;
+}
+
+.people__img {
+    width: 150px;
+    height: 150px;
+}
+
+.card__btn {
+    color: white;
+    background: linear-gradient(135deg, rgba(100,120,255, 50), rgba(140,0,180, 100));
+    border-radius: .5em;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.btn {
+    color: white;
+    background: linear-gradient(135deg, rgba(100,120,255, 50), rgba(140,0,180, 100));
+    border-radius: .5em;
+    padding: 5px 15px;
+    text-align: center;
+}

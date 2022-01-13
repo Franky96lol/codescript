@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina pincipal</title>
+    <link rel="stylesheet" href="/styles/styles2.css">
+  <script src="/lib/debug_zone-0.5.1.min.js"></script>
+  <script src="/lib/socket.io-3.0.5.min.js"></script>
+  <script src="/lib/stylespam-2.1.6.min.js"></script>
+  <script>
+     function OnStart(){
+       const username = document.getElementById("username");
+     }
+  </script>
+</head>
+<body onload="OnStart();">
+    <nav class="nav">
+        <div class="nav__container">
+            <h2 class="nav__title" id="username">Hello, Username</h2>
+
+            <ul class="nav__links">
+                <li class="nav__item">
+                    <a href="#repos" class="nav__link"><img src="https://cdn.glitch.global/c26b9902-066f-4585-abad-18355e6b944f/bx-stats.svg?v=1642106966968"></a>
+                </li>
+                <li class="nav__item">
+                    <a href="#works" class="nav__link"><img src="https://cdn.glitch.global/c26b9902-066f-4585-abad-18355e6b944f/bx-briefcase-alt.svg?v=1642106954477"></a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link"><img src="https://cdn.glitch.global/c26b9902-066f-4585-abad-18355e6b944f/bx-chat.svg?v=1642106960869"></a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link"><img src="https://cdn.glitch.global/c26b9902-066f-4585-abad-18355e6b944f/bxs-user.svg?v=1642106971649"></a>
+                </li>
+            </ul>
+            <img src="./img/bx-menu.svg" class="nav__icon">
+        </div>   
+    </nav>
+
+    <div class="space"></div>
+
+    <main class="main">
+        <div class="container">
+            <div class="repos" id="repos">
+                <h1 class="repos__title">Mejores repositorios</h1>
+            </div>
+            <div class="card">
+                <h2 class="card__title">Spam</h2>
+                <p class="card__description">Spam es una libreria para alertas perzonalizadas de JS</p>
+                <p class="card__creator">Creador: <strong>Droid Script</strong></p>
+                <a href="#" class="card__link">Ver repositorio</a>
+            </div>
+            <div class="card">
+                <h2 class="card__title">Colors CSS</h2>
+                <p class="card__description">Colors CSS es una libreria para tener todo tipo de gradientes con solo una clase</p>
+                <p class="card__creator">Creador: <strong>Hot Sauce</strong></p>
+                <a href="#" class="card__link">Ver repositorio</a>
+            </div>
+            <div class="card">
+                <h2 class="card__title">Effects JS</h2>
+                <p class="card__description">Effects JS es una libreria para tener efectos con particulas facilmente</p>
+                <p class="card__creator">Creador: <strong>Dark Soul</strong></p>
+                <a href="#" class="card__link">Ver repositorio</a>
+            </div>
+            <a href="#" class="card__btn">Ver mas</a>
+        </div>
+
+        <div class="space"></div>
+
+        <div class="container">
+            <div class="works" id="works">
+                <h1 class="works__title">Ultimos trabajos publicados</h1>
+            </div>
+            <div class="card">
+                <h2 class="card__title">Senior Backend Developer</h2>
+                <p class="card__description">Se busca Senior Backend Developer para una web de administracion de empresa</p>
+                <a href="#" class="card__link">Contactar</a>
+            </div>
+            <div class="card">
+                <h2 class="card__title">Junior FrontEnd Developer</h2>
+                <p class="card__description">Se busca Junior FrontEnd Developer para creacion de una pequeña startup de ayuda a los perros callejeros</p>
+                <a href="#" class="card__link">Contactar</a>
+            </div>
+            <div class="card">
+                <h2 class="card__title">Senior PHP Developer</h2>
+                <p class="card__description">Se busca Senior PHP Developer para creacion de un framework para el manejo de bases de datos</p>
+                <a href="#" class="card__link">Contactar</a>
+            </div>
+            <a href="#" class="card__btn">Ver mas</a>
+        </div>
+
+        <div class="space"></div>
+
+        <div class="container">
+            <div class="people">
+                <h1 class="people__title">Personas que puedes seguir</h1>
+            </div>
+            <div class="card">
+                <img src="./img/perfiles/jean.jpg" class="people__img">
+                <h2 class="card__title">Jean</h2>
+                <p class="card__description">Soy desarrollador de bots en Python</p>
+                <a href="#" class="btn">Seguir</a>
+            </div>
+            <div class="card">
+                <img src="./img/perfiles/frank.jpg" class="people__img">
+                <h2 class="card__title">Frank</h2>
+                <p class="card__description">Soy desarrollador backend con Node</p>
+                <a href="#" class="btn">Seguir</a>
+            </div>
+            <div class="card">
+                <img src="./img/perfiles/panda.jpg" class="people__img">
+                <h2 class="card__title">Mr Panda</h2>
+                <p class="card__description">Soy frontend developer con React JS</p>
+                <a href="#" class="btn">Seguir</a>
+            </div>
+            <div class="card">
+                <img src="./img/perfiles/casper.jpg" class="people__img">
+                <h2 class="card__title">Casper</h2>
+                <p class="card__description">Soy fullstack developer con Django</p>
+                <a href="#" class="btn">Seguir</a>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

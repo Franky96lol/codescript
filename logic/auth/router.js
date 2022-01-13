@@ -10,6 +10,7 @@ router.get("/verifyMail/:user/:id" , (req , res) => res.json(verifyMail(req ,res
 router.get("/login" , (req , res) => res.sendFile(config.RES + "/pages/login.html"));
 router.get("/register" , (req , res) => res.sendFile(config.RES + "/pages/register.html"));
 
+
 module.exports = router;
 
 
