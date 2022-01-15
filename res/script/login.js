@@ -6,7 +6,7 @@ function login(username , password){
     rgba(100,120,255, 50),
     rgba(140,0,180, 100)
   )`
-}})
+}});
   
   server.post("/auth/login" , {
     username : username,
@@ -21,13 +21,15 @@ function login(username , password){
           action: ()=>{return null;}
         });
       }else{
-        window.location.href = "/index";
+        window.localStorage.setItem("token", data.message);
+        window.localStorage.setItem("username" , username);
+        window.location.href = "/";
       }
     }else{
        spam.alert({
         title : "Error:",
         text : "Error...",
-        action : ()=>{return null}
+        action : ()=>{return null;}
       });
     }
   });
