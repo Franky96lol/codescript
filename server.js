@@ -41,5 +41,26 @@ for(let nick of nicks){
 }*/
 
 io.on("connection", function(socket) {
+    if(!socket.handshake.query) {
+      socket.disconnect("Error de session!"); 
+      return;
+    };
+    if(!socket.handshake.query.token || !socket.handshake.query.token) {
+      socket.disconnect("Error de session!"); 
+      return;
+    };
+    if(!auth.verifyToken(socket.handshake.query.token)){
+      socket.disconnect("Session agotada!"); 
+      return;
+    };
+    let username = socket.handshake.query.username;
+    if(!global.users[username]){
+      if(fs.existsSync(config.DB + "/accounts/" + username + ".json")){
+          global.users[username] = helper.readFile(config.DB + '/accounts/' + username + ".json");
+      }else{
+         socket.diconnect("Usuario no encontrado");
+        return;
+      }
+    }
     
 });
